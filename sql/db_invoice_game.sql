@@ -152,3 +152,54 @@ JOIN customer c ON t.id_game = c.id_game
 JOIN detail_transaksi d ON t.id_transaksi = d.id_transaksi
 JOIN produk_topup p ON d.id_product = p.id_product;
 
+-- PRIMARY KEY & FOREIGN KEY
+
+-- TABEL: customer
+-- Primary Key: id_game
+
+-- TABEL: admin
+-- Primary Key: id_admin
+
+-- TABEL: produk_topup
+-- Primary Key: id_product
+
+-- TABEL: transaksi
+-- Primary Key: id_transaksi
+-- Foreign Key: id_game → referensi ke customer(id_game)
+
+-- TABEL: detail_transaksi
+-- Primary Key (Composite / Gabungan): (id_transaksi, id_product)
+-- Foreign Key:
+--   id_transaksi → referensi ke transaksi(id_transaksi)
+--   id_product   → referensi ke produk_topup(id_product)
+
+-- TABEL: metode_pembayaran
+-- Primary Key: id_metode
+
+
+-- RELASI ANTAR TABEL
+
+-- RELASI: One to Many (1 : N)
+-- PK: customer.id_game
+-- FK: transaksi.id_game
+-- Keterangan:
+-- Satu customer (player game) dapat melakukan banyak transaksi top up,
+-- tetapi satu transaksi hanya dimiliki oleh satu customer.
+
+-- RELASI: One to Many (1 : N)
+-- PK: transaksi.id_transaksi
+-- FK: detail_transaksi.id_transaksi
+-- Keterangan:
+-- Satu transaksi dapat memiliki lebih dari satu detail produk yang dibeli.
+
+-- RELASI: One to Many (1 : N)
+-- PK: produk_topup.id_product
+-- FK: detail_transaksi.id_product
+-- Keterangan:
+-- Satu produk top up dapat muncul di banyak transaksi yang berbeda.
+
+-- RELASI: Many to Many (M : N)
+-- Keterangan:
+-- Satu transaksi dapat membeli banyak produk
+-- Satu produk dapat dibeli pada banyak transaksi
+-- Relasi M : N ini dipecah menggunakan tabel detail_transaksi
