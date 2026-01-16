@@ -1,29 +1,30 @@
--- ==============================
 -- CREATE DATABASE
--- ==============================
 CREATE DATABASE db_invoicegame;
 USE db_invoicegame;
 
--- ==============================
 -- TABLE CUSTOMER
--- ==============================
 CREATE TABLE customer (
     id_game BIGINT PRIMARY KEY,
     username_game VARCHAR(100) NOT NULL
 );
 
--- ==============================
 -- TABLE ADMIN
--- ==============================
 CREATE TABLE admin (
     id_admin INT AUTO_INCREMENT PRIMARY KEY,
     username_admin VARCHAR(50) NOT NULL,
     password_admin VARCHAR(255) NOT NULL
 );
+ALTER TABLE transaksi
+ADD id_admin INT;
 
--- ==============================
+ALTER TABLE transaksi
+ADD CONSTRAINT fk_transaksi_admin
+FOREIGN KEY (id_admin) REFERENCES admin(id_admin);
+UPDATE transaksi
+SET id_admin = 1;
+
+
 -- TABLE TRANSAKSI
--- ==============================
 CREATE TABLE transaksi (
     id_transaksi VARCHAR(25) PRIMARY KEY,
     id_game BIGINT,
@@ -35,18 +36,14 @@ CREATE TABLE transaksi (
     FOREIGN KEY (id_game) REFERENCES customer(id_game)
 );
 
--- ==============================
 -- TABLE PRODUK TOP UP
--- ==============================
 CREATE TABLE produk_topup (
     id_product INT PRIMARY KEY,
     jumlah_diamond VARCHAR(20),
     harga_satuan INT
 );
 
--- ==============================
 -- TABLE DETAIL TRANSAKSI
--- ==============================
 CREATE TABLE detail_transaksi (
     id_transaksi VARCHAR(25),
     id_product INT,
@@ -56,9 +53,7 @@ CREATE TABLE detail_transaksi (
     FOREIGN KEY (id_product) REFERENCES produk_topup(id_product)
 );
 
--- ==============================
 -- INSERT DATA CUSTOMER
--- ==============================
 INSERT INTO customer VALUES
 (217978152, 'PlayerML01'),
 (123456789, 'PlayerML02'),
@@ -67,15 +62,11 @@ INSERT INTO customer VALUES
 (231781273, 'PlayerML05'),
 (276453890, 'PlayerML06');
 
--- ==============================
 -- INSERT DATA ADMIN
--- ==============================
 INSERT INTO admin (username_admin, password_admin)
 VALUES ('admin1', 'admin123');
 
--- ==============================
 -- INSERT DATA PRODUK TOP UP
--- ==============================
 INSERT INTO produk_topup VALUES
 (1000001, '250 Diamond', 27500),
 (1000002, '2000 Diamond', 250000),
@@ -84,9 +75,7 @@ INSERT INTO produk_topup VALUES
 (1000005, '400+3 Diamond', 65000),
 (1000006, '50+6 Diamond', 15000);
 
--- ==============================
 -- INSERT DATA TRANSAKSI
--- ==============================
 INSERT INTO transaksi VALUES
 ('ASJDBNJAVHK128WF', 217978152, 'GOPAY', '19:02', 2000, 29500, 'SELESAI'),
 ('LSACBQLHFU3Q74B', 123456789, 'DANA', '15:00', 2000, 252000, 'SELESAI'),
@@ -95,9 +84,7 @@ INSERT INTO transaksi VALUES
 ('WHDBSJADBAVJDSA', 231781273, 'QRIS', '22:15', 2000, 197000, 'SELESAI'),
 ('ASWY73YSGGOSU11', 276453890, 'GOPAY', '13:25', 2000, 62000, 'SELESAI');
 
--- ==============================
 -- INSERT DETAIL TRANSAKSI
--- ==============================
 INSERT INTO detail_transaksi VALUES
 ('ASJDBNJAVHK128WF', 1000001, 1),
 ('LSACBQLHFU3Q74B', 1000002, 3),
@@ -151,6 +138,8 @@ FROM transaksi t
 JOIN customer c ON t.id_game = c.id_game
 JOIN detail_transaksi d ON t.id_transaksi = d.id_transaksi
 JOIN produk_topup p ON d.id_product = p.id_product;
+
+
 
 -- PRIMARY KEY & FOREIGN KEY
 
