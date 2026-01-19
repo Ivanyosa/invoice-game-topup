@@ -90,4 +90,4 @@ dan menyimpan seluruh artefak proyek Pemrograman Basis Data.
 ---
 
 ✨ *Proyek ini dibuat untuk keperluan akademik dan pembelajaran SQL.*
-Dosen pengampu: @ridwan_dwiirawan@udb.ac.id
+Dosen pengampu: ridwan_dwiirawan@udb.ac.id
