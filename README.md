@@ -56,11 +56,10 @@ detail_transaksi, dan metode_pembayaran.*
 
 ---
 
-## 🧾 Contoh Output Invoice
-Berikut contoh hasil query **JOIN multi-tabel**
-yang menampilkan data transaksi dan invoice game top up.
+## 🧾 Relasi Antar Table
+Berikut adalah gambar desain antar table transaksi dan invoice game top up.
 
-![Contoh Invoice](docs/contoh_invoice.png)
+![Contoh Invoice](assets/realsi.png)
 
 ---
 
