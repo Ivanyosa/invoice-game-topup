@@ -192,3 +192,7 @@ JOIN produk_topup p ON d.id_product = p.id_product;
 -- Satu transaksi dapat membeli banyak produk
 -- Satu produk dapat dibeli pada banyak transaksi
 -- Relasi M : N ini dipecah menggunakan tabel detail_transaksi
+
+3. Database dan seluruh tabel akan terbentuk otomatis  
+4. Jalankan query SELECT untuk melihat hasil transaksi dan invoice
+
