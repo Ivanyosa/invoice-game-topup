@@ -44,6 +44,26 @@ Relasi database mencakup:
 
 ---
 
+## 🧩 Diagram ERD Database
+Diagram berikut menggambarkan hubungan antar tabel
+pada database **db_invoicegame** secara visual.
+
+![ERD Database Invoice Game](docs/erd_invoicegame.png)
+
+> 📌 *Diagram ERD menunjukkan relasi Primary Key dan Foreign Key
+antar tabel customer, admin, transaksi, produk_topup,
+detail_transaksi, dan metode_pembayaran.*
+
+---
+
+## 🧾 Contoh Output Invoice
+Berikut contoh hasil query **JOIN multi-tabel**
+yang menampilkan data transaksi dan invoice game top up.
+
+![Contoh Invoice](docs/contoh_invoice.png)
+
+---
+
 ## 🧠 Materi SQL yang Digunakan
 
 ### 🔹 DDL (Data Definition Language)
@@ -77,9 +97,9 @@ Relasi database mencakup:
 
 ## ⚙️ Cara Menjalankan Proyek
 1. Buka **MySQL Workbench**
-2. Jalankan file SQL pada folder:sql
-3. 3. Database dan seluruh tabel akan terbentuk otomatis
-4. Jalankan query SELECT untuk melihat hasil transaksi dan invoice
+2. Jalankan file SQL pada folder `sql/`
+3. Database dan seluruh tabel akan terbentuk otomatis
+4. Jalankan query `SELECT` untuk melihat hasil transaksi dan invoice
 
 ---
 
@@ -91,4 +111,5 @@ dan menyimpan seluruh artefak proyek Pemrograman Basis Data.
 
 ✨ *Proyek ini dibuat untuk keperluan akademik dan pembelajaran SQL.*
 
-Dosen pengampu: ridwan_dwiirawan@udb.ac.id
+**Dosen pengampu:**  
+ridwan_dwiirawan@udb.ac.id
