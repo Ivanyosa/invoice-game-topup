@@ -42,26 +42,42 @@ Relasi database mencakup:
 - **Produk_Topup – Detail_Transaksi** : One to Many  
 - **Transaksi – Produk_Topup** : Many to Many  
 
----
-
 ## 🧩 Diagram ERD Database
-Diagram berikut menggambarkan hubungan antar tabel
-pada database **db_invoicegame** secara visual.
+Diagram berikut menggambarkan **Entity Relationship Diagram (ERD)**
+dari database **db_invoicegame** yang menunjukkan struktur tabel
+serta hubungan antar entitas dalam sistem invoice game top up.
 
 ![ERD Database Invoice Game](assets/erd.jpg)
 
-> 📌 *Diagram ERD menunjukkan relasi Primary Key dan Foreign Key
-antar tabel customer, admin, transaksi, produk_topup,
+> 📌 *Diagram ERD menampilkan relasi antar tabel beserta
+Primary Key (PK) dan Foreign Key (FK) pada tabel
+customer, admin, transaksi, produk_topup,
 detail_transaksi, dan metode_pembayaran.*
 
 ---
 
-## 🧾 Relasi Antar Table
-Berikut adalah gambar desain antar table transaksi dan invoice game top up.
+## 🧾 Relasi Antar Tabel
+Gambar berikut menunjukkan **implementasi relasi antar tabel**
+dalam sistem transaksi dan invoice game top up,
+termasuk relasi One to Many (1:N) dan Many to Many (M:N).
 
-![Contoh Invoice](assets/relasi.png)
+![Relasi Antar Tabel Invoice Game](assets/relasii.png)
 
 ---
+
+## 💻 Implementasi SQL
+Berikut merupakan **tangkapan layar (screenshot)**
+implementasi perintah SQL yang digunakan untuk
+membuat database, tabel, serta relasi antar tabel
+pada sistem invoice game top up.
+
+![Implementasi SQL Database](assets/sql.png)
+
+> 📌 *Screenshot SQL menunjukkan penerapan
+DDL (CREATE DATABASE, CREATE TABLE),
+Primary Key, Foreign Key, serta relasi antar tabel
+pada database **db_invoicegame**.*
+
 
 ## 🧠 Materi SQL yang Digunakan
 
