@@ -77,6 +77,29 @@ Relasi database mencakup:
 ---
 
 ## ⚙️ Cara Menjalankan Proyek
-
 1. Buka **MySQL Workbench**
 2. Jalankan file SQL pada folder:
+
+---
+
+## 📷 Dokumentasi
+- ERD Database
+- Screenshot hasil query JOIN dan agregasi
+- Poster UAS dalam format PDF
+
+---
+
+## 👥 Anggota Kelompok
+- Ivan Andrianto (NIM)
+- Nama Anggota 2 (NIM)
+- Nama Anggota 3 (NIM)
+
+---
+
+## 🔗 Repository GitHub
+📎 Repository ini digunakan sebagai **bukti pengembangan proyek UAS**
+dan menyimpan seluruh artefak proyek Pemrograman Basis Data.
+
+---
+
+✨ *Proyek ini dibuat untuk keperluan akademik dan pembelajaran SQL.*
