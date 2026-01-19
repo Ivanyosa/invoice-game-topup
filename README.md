@@ -72,27 +72,14 @@ Relasi database mencakup:
 - **MySQL**
 - **MySQL Workbench**
 - **GitHub**
-- **Git Bash**
 
 ---
 
 ## ⚙️ Cara Menjalankan Proyek
 1. Buka **MySQL Workbench**
-2. Jalankan file SQL pada folder:
-
----
-
-## 📷 Dokumentasi
-- ERD Database
-- Screenshot hasil query JOIN dan agregasi
-- Poster UAS dalam format PDF
-
----
-
-## 👥 Anggota Kelompok
-- Ivan Andrianto (NIM)
-- Nama Anggota 2 (NIM)
-- Nama Anggota 3 (NIM)
+2. Jalankan file SQL pada folder:sql
+3. 3. Database dan seluruh tabel akan terbentuk otomatis
+4. Jalankan query SELECT untuk melihat hasil transaksi dan invoice
 
 ---
 
