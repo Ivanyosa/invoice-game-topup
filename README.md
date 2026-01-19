@@ -48,7 +48,7 @@ Relasi database mencakup:
 Diagram berikut menggambarkan hubungan antar tabel
 pada database **db_invoicegame** secara visual.
 
-![ERD Database Invoice Game](docs/erd_invoicegame.png)
+![ERD Database Invoice Game](assets/erd.jpg)
 
 > 📌 *Diagram ERD menunjukkan relasi Primary Key dan Foreign Key
 antar tabel customer, admin, transaksi, produk_topup,
