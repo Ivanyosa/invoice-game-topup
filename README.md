@@ -59,7 +59,7 @@ detail_transaksi, dan metode_pembayaran.*
 ## 🧾 Relasi Antar Table
 Berikut adalah gambar desain antar table transaksi dan invoice game top up.
 
-![Contoh Invoice](assets/realsi.png)
+![Contoh Invoice](assets/relasi.png)
 
 ---
 
